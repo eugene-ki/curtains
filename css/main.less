@@ -8,6 +8,13 @@ body {
 	font-size: 16px;
 	line-height: 28px;
 	color: @main-font-color;
+	min-width: 1145px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 a {
@@ -15,12 +22,6 @@ a {
 	color: #fff;
 }
 
-.wrapper {
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	margin: auto;
-}
 
 h1 {
 	font-size: 30px;
@@ -37,8 +38,13 @@ h2 {
 }
 
 header {
+	background-image: url(../img/header-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-right: 15px;
+	padding-left: 15px;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%, 0% 0%);
 	.header-top {
-		background-color: #333;
 		.header-top-container {
 			position: relative;
 			.container();
@@ -127,6 +133,60 @@ header {
 						}
 					}
 				}
+			}
+		}
+	}
+	.header-main {
+		text-align: center;
+		padding-top: 200px;
+		color: #fff;
+		.top-tip {
+			font-size: 45px;
+			line-height: 45px;
+			font-weight: lighter;
+		}
+		.main-tip {
+			font-size: 70px;
+			line-height: 100px;
+			font-weight: bold;
+			margin: 20px 0;
+		}
+		.bottom-tip {
+			font-size: 40px;
+			line-height: 40px;
+			font-weight: lighter;
+			margin-bottom: 90px;
+		}
+		@media only screen and(max-width: 1630px),
+		only screen and(max-device-width: 1630px) {
+			.main-tip {
+			font-size: 50px;
+			line-height: 75px;
+			font-weight: bold;
+			margin: 20px 0;
+		}
+		}
+		.btn-container {
+			.container();
+			padding-bottom: 230px;
+			.btn {
+				display: inline-block;
+				width: 160px;
+				height: 42px;
+				text-transform: uppercase;
+				line-height: 37px;
+				font-size: 15px;
+				border: 2px solid @main-orange;
+				transition: background .2s;
+				&:hover {
+					background-color: @main-orange;
+				}
+			}
+			.catalog {
+				margin-right: 10px;
+			}
+			.portfolio {
+				margin-left: 10px;
 			}
 		}
 	}
