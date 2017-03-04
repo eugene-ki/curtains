@@ -4,3 +4,7 @@
 #не загружаем bower-components
 
 bower_components/
+
+#не загружаем конфиги prepros
+
+prepros-6.config
