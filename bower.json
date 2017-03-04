@@ -1,0 +1,21 @@
+{
+  "name": "curtains",
+  "authors": [
+    "Eugene Kiyashko <kiyashko.evgeniy@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "normalize-css": "^5.0.0"
+  }
+}

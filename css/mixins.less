@@ -1,0 +1,84 @@
+.shadow(@x:2px; @y:2px; @blur:5px; @scale:0; @color:rgba(0, 0, 0, 0.3)) {
+	box-shadow: @x @y @blur @scale @color;
+}
+/*----Note----------------------------
+быстрая тень
+--------------------------------------*/
+.container() {
+	max-width: 1170px;
+	margin: auto;
+	padding: 0 15px;
+	overflow-x: hidden;
+    overflow-y: hidden;
+}
+/*----Note----------------------------
+центровка контента
+-------------------------------------*/
+.centered(@value: auto) {   
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: @value;
+}
+/*----Note------------------------------
+центровка блока с absolute
+---------------------------------------*/
+.placeholder(@rules) {
+
+    &::-webkit-input-placeholder {
+        @rules();
+    }
+    &:-moz-placeholder {
+        @rules();
+    }
+    &::-moz-placeholder {
+        @rules();
+    }
+    &:-ms-input-placeholder {
+        @rules();
+    }
+}
+/*----Example-------------------------------
+.placeholder({
+    color: #000;
+    text-transform: uppercase;
+});
+-------------------------------------------*/
+.triangle(@_; @size; @color) {
+    width: 0;
+    height: 0;
+    border-width: @size;
+    border-style: solid;
+    border-color: @color;
+}
+
+.triangle(top; @size; @color) {
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-style: none;
+}
+
+.triangle(right; @size; @color) {
+    border-right: none;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.triangle(bottom; @size; @color) {
+    border-bottom: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.triangle(left; @size; @color) {
+    border-left: none;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+/*----Note--------------------------------
+треугольники с направлением
+угла в параметрах
+------------------------------------------*/
+

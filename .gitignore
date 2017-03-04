@@ -1,0 +1,6 @@
+#не загружаем макет
+*.psd
+
+#не загружаем bower-components
+
+bower_components/
