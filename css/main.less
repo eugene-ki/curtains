@@ -12,6 +12,7 @@ body {
 
 a {
 	text-decoration: none;
+	color: #fff;
 }
 
 .wrapper {
@@ -33,4 +34,100 @@ h2 {
 	line-height: 25px;
 	font-weight: bold;
 	color: #0d0d0d;
+}
+
+header {
+	.header-top {
+		background-color: #333;
+		.header-top-container {
+			position: relative;
+			.container();
+			padding-top: 17px;
+			text-align: center;
+			.call-back {
+				position: absolute;
+				left: 0;
+				top: 50px;
+				font-family: @pt-font;
+				span {
+					display: block;
+					text-align: left;
+				}
+				.tel {
+					font-size: 26px;
+					line-height: 20px;
+					color: #efe6db;
+				}
+				.call {
+					font-size: 15px;
+					line-height: 30px;
+				}
+			}
+			.logo {
+				display: inline-block;
+			}
+			.account {
+				position: absolute;
+				right: 0;
+				top: 50px;
+				.link {
+					display: block;
+					float: left;
+					line-height: 40px;
+					font-size: 20px;
+					width: 40px;
+					height: 40px;
+					border-radius: 50%;
+					background-color: @main-orange;
+					transition: background .2s;
+					&:not(:last-of-type) {
+						margin-right: 15px;
+					}
+					&:hover {
+						background-color: @main-orange-bright;
+					}
+				}
+			}
+		}
+		.main-menu-container {
+			.container();
+			text-align: center;
+			nav {
+				display: inline-block;
+				text-align: left;
+				ul {
+					font-size: 0;
+					li {
+						list-style-type: none;
+						position: relative;
+						display: inline-block;
+						font-size: 18px;
+						text-transform: uppercase;
+						line-height: 80px;
+						&:not(:last-of-type) {
+							margin-right: 90px;
+							&::after {
+								content: '\\\\';
+								position: absolute;
+								right: -45px;
+								top: 0;
+								display: block;
+								font-size: 18px;
+								color: #fff;
+							}
+						}
+						a {
+							transition: color .2s;
+							&:hover {
+								color: @main-orange;
+							}
+							&:active {
+								color: darken(@main-orange, 20%);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
