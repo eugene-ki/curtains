@@ -37,3 +37,88 @@ h2 {
 	font-weight: bold;
 	color: #0d0d0d;
 }
+
+
+.about-top {
+	position: relative;
+	top: -100px;
+	z-index: 400;
+	background-image: 
+	url(../img/about-bg-left.png),
+	url(../img/about-bg-right-top.png);
+	background-repeat: no-repeat;
+	background-position: 
+	left top 200px,
+	right top;
+	background-size: 20%;
+	.about-container {
+		.container;
+		padding-top: 200px;
+		.about-tip {
+			position: relative;
+			font-size: 0;
+			margin-bottom: 150px;
+			h1 {
+				text-transform: uppercase;
+				display: inline-block;
+				margin-right: 40px;
+				position: relative;
+				&::after {
+					content: '';
+					display: block;
+					width: 4px;
+					height: 45px;
+					background-color: @main-orange-bright;
+					position: absolute;
+					right: -20px;
+					top: -8px;
+				}
+			}
+			p {
+				width: 76%;
+				display: inline-block;
+				text-transform: uppercase;
+				line-height: 20px;
+				position: relative;
+				top: 4px;
+				font-size: 16px;
+
+			}
+		}
+		.features {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 40px;
+			position: relative;
+			.feature {
+				text-align: center;
+				.bulb {
+					width: 125px;
+					display: inline-block;
+					margin-bottom: 30px;
+					height: 125px;
+					border-radius: 50%;
+					border: 2px solid @main-orange-bright;
+					background-image: url(../img/bulb.svg);
+					background-repeat: no-repeat;
+					background-position: 50% 50%;
+					background-size: 25%;
+				}
+				h2 {
+					text-transform: uppercase;
+					font-size: 24px;
+					color: #333;
+					margin-bottom: 10px;
+				}
+				span {
+					color: #333;
+					font-size: 24px;
+					line-height: 30px;
+					text-transform: lowercase;
+					display: block;
+					width: 80%;
+					margin: auto;				}
+			}
+		}
+	}
+}
