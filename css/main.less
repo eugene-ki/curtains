@@ -2,6 +2,7 @@
 @import url(varibles.less);
 @import url(fonts.less);
 @import url(header.less);
+@import url(about.less);
 
 body {
 	font-family: @open-font;
@@ -38,87 +39,62 @@ h2 {
 	color: #0d0d0d;
 }
 
-
-.about-top {
-	position: relative;
-	top: -100px;
-	z-index: 400;
-	background-image: 
-	url(../img/about-bg-left.png),
-	url(../img/about-bg-right-top.png);
+.three-d-gift {
+	clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%, 0% 0%);
+	clip-path: url(#three-d-clip);
+	background-image: url(../img/3d-gift-bg.jpg);
 	background-repeat: no-repeat;
-	background-position: 
-	left top 200px,
-	right top;
-	background-size: 20%;
-	.about-container {
-		.container;
-		padding-top: 200px;
-		.about-tip {
+	background-size: cover;
+	position: relative;
+	z-index: 600;
+	svg {
+		position: absolute;
+	}
+	.three-d-gift-container {
+		.container();
+		padding-top: 260px;
+		padding-bottom: 170px;
+		text-align: center;
+		color: #fff;
+		.tip {
+			font-size: 45px;
+			line-height: 60px;
+			font-weight: bold;
+			margin-bottom: 50px;
 			position: relative;
-			font-size: 0;
-			margin-bottom: 150px;
-			h1 {
-				text-transform: uppercase;
-				display: inline-block;
-				margin-right: 40px;
-				position: relative;
-				&::after {
-					content: '';
-					display: block;
-					width: 4px;
-					height: 45px;
-					background-color: @main-orange-bright;
-					position: absolute;
-					right: -20px;
-					top: -8px;
-				}
-			}
-			p {
-				width: 76%;
-				display: inline-block;
-				text-transform: uppercase;
-				line-height: 20px;
-				position: relative;
-				top: 4px;
-				font-size: 16px;
-
+			&::after {
+				content: '';
+				display: block;
+				width: 50px;
+				height: 4px;
+				background-color: @main-orange-bright;
+				position: absolute;
+				right: 50%;
+				margin-right: -25px;
+				bottom: -25px;
 			}
 		}
-		.features {
-			display: flex;
-			justify-content: space-between;
-			margin-bottom: 40px;
-			position: relative;
-			.feature {
-				text-align: center;
-				.bulb {
-					width: 125px;
-					display: inline-block;
-					margin-bottom: 30px;
-					height: 125px;
-					border-radius: 50%;
-					border: 2px solid @main-orange-bright;
-					background-image: url(../img/bulb.svg);
-					background-repeat: no-repeat;
-					background-position: 50% 50%;
-					background-size: 25%;
-				}
-				h2 {
-					text-transform: uppercase;
-					font-size: 24px;
+		span {
+			display: block;
+			text-transform: uppercase;
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 30px;
+		}
+		.btn {
+			display: inline-block;
+				width: 160px;
+				height: 42px;
+				text-transform: uppercase;
+				line-height: 37px;
+				font-weight: bold;
+				font-size: 15px;
+				border: 2px solid #fff;
+				transition: background, color .2s, .2s;
+				&:hover {
+					background-color: #fff;
 					color: #333;
-					margin-bottom: 10px;
 				}
-				span {
-					color: #333;
-					font-size: 24px;
-					line-height: 30px;
-					text-transform: lowercase;
-					display: block;
-					width: 80%;
-					margin: auto;				}
-			}
 		}
 	}
 }
